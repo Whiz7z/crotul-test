@@ -1,0 +1,348 @@
+@import "../../styles/variables"
+  
+  
+header
+  width: 100%
+  grid-column: 2/3
+  margin-top: 280px
+  
+  .background
+    width: 100vw
+    height: 55vh
+    background: rgb(255,255,255)
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(245,200,185,1) 20%, rgba(242,144,110,1) 60%, rgba(238,86,34,1) 100%)
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%)
+
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+
+  .content
+    display: grid
+    grid-template-columns: 7fr 5fr
+
+    .mobile_btn
+      display: none
+      padding: 1.1rem 3.2rem
+      border-radius: 100px
+      background: $uiBg
+      color: $white
+      border: none
+      outline: none
+      font-size: 1.6rem
+      text-transform: uppercase
+      font-weight: bold
+      cursor: pointer
+      transition: 300ms
+
+      &:hover
+        background: $uiBgHover
+        
+      span
+        height: 16px
+        margin-left: 2.5rem
+        position: relative
+        top: 3px
+        svg
+          height: 17px
+
+    .info_container
+      display: grid
+      row-gap: 2rem
+      justify-items: start
+      h1
+        font-size: 7.2rem
+        line-height: 7.4rem
+        text-transform: uppercase
+        
+      p
+        font-size: 2.2rem
+        font-weight: regular
+
+      button 
+        padding: 1.1rem 3.2rem
+        border-radius: 100px
+        background: $uiBg
+        color: $white
+        border: none
+        outline: none
+        font-size: 1.6rem
+        text-transform: uppercase
+        font-weight: bold
+        cursor: pointer
+        transition: 300ms
+        &:hover
+          background: $uiBgHover
+          
+        span
+          height: 16px
+          margin-left: 2.5rem
+          position: relative
+          top: 3px
+          svg
+            height: 17px
+
+      
+      .rating
+        font-size: 1.6rem
+        display: grid
+        gap: 1rem
+        grid-template-columns: 1fr 3fr
+
+        .stars 
+          display: flex
+          gap: 0.2rem
+
+        .photos
+          display: flex
+          grid-column: 1/3
+          .photo
+            width: 48px
+            height: 48px
+            border-radius: 50%
+            overflow: hidden
+            border: 4px solid $white
+            position: relative
+           
+            img
+              width: 100%
+              height: 100%
+              
+
+    .video_container
+      width: 435px
+      height: 495px
+      overflow: hidden
+      border-radius: 32px
+      position: relative
+      justify-self: end
+      
+      
+      img
+        
+        height: 110%
+        object-fit: cover
+        object-position: -265px -20px
+        
+        
+
+          
+        
+      .play_btn
+        width: 80px
+        height: 80px
+        background: $white
+        border-radius: 50%
+        position: absolute
+        top: calc( 50% - 40px )
+        left: calc( 50% - 40px )
+        display: flex
+        align-items: center
+        justify-content: center
+
+        cursor: pointer
+        transition: 300ms
+        &:hover
+          transform: scale(1.05)
+          background: rgba(0,0 ,0 ,0.5 )
+
+          svg
+            
+            path
+              fill: $white
+        
+        svg
+          margin-left: 5px
+
+          path
+            transition: 300ms
+          
+@media  screen and (max-width: 1440px)
+  
+  header
+    .content
+      grid-auto-columns: auto auto
+      .info_container
+        gap: 2rem
+        display: flex
+        flex-flow: column 
+        align-items: flex-start
+        justify-content: flex-start
+        h1
+          font-size: 5.4rem
+          line-height: 5.4rem
+          br
+            display: none
+
+        p
+          font-size: 1.8rem
+
+      .video_container
+        width: 300px
+        height: 350px
+
+        img
+          height: 100%
+          object-position: -165px 0px
+
+@media  screen and (max-width: 1080px)
+  
+  header
+    margin-top: 200px
+    .content
+      grid-auto-columns: auto auto
+      .info_container
+        gap: 2rem
+        
+        h1
+          font-size: 4.4rem
+          line-height: 5.4rem
+          br
+            display: block
+
+        p
+          font-size: 1.6rem
+
+        button
+          font-size: 1.4rem
+
+      .video_container
+        
+
+        img
+          
+          
+@media screen and (max-width: 860px)
+
+  header
+    margin-top: 200px
+    .content
+      grid-auto-columns: 1fr
+      row-gap: 60px
+      .info_container
+        grid-column: 1/3
+        
+        h1
+          
+          br
+            display: block
+
+        p
+          font-size: 1.6rem
+
+        button
+          font-size: 1.4rem
+          align-self: center
+
+        .rating
+          align-self: flex-end
+
+      .video_container
+        grid-column: 1/3
+        justify-self: center
+        width: 60%
+        height: auto
+
+        img
+          height: 100%
+          object-position: 0 0 
+
+@media screen and (max-width: 660px)
+
+  header
+    margin-top: 200px
+    .content
+      grid-auto-columns: 1fr
+      row-gap: 60px
+      .info_container
+        grid-column: 1/3
+        gap:1rem
+        h1
+          
+          font-size: 3.8rem
+          line-height: 4.4rem
+          br
+            display: none
+
+        p
+          font-size: 1.4rem
+
+        button
+          font-size: 1.2rem
+          align-self: center
+        .rated
+          align-self: center
+          font-size: 1.2rem
+
+        .rating
+          align-self: flex-end
+
+      .video_container
+        grid-column: 1/3
+        justify-self: center
+        width: 85%
+        height: auto
+
+        img
+          height: 100%
+          object-position: 0 0 
+
+
+@media screen and (max-width: 440px)
+  header
+    margin-top: 60px
+    .background
+      height: 35vh
+    .content
+      row-gap: 20px
+      grid-template-columns: 1fr
+      .info_container
+        h1
+          font-size: 2.8rem
+          line-height: 3.2rem
+        p
+          br
+            display: none
+        button
+          display: none
+
+        .rating
+          
+          display: none !important
+
+      .video_container
+        width: 100%
+        height: 355px
+        img
+          height: 130%
+          object-position: -200px  -20px
+
+      .mobile_btn
+        display: block
+        align-self: center
+        justify-self: center
+        grid-column: 1/3
+        font-size: 1.4rem
+        padding-top: 9px
+        padding-bottom: 9px
+        width: 100%
+          
+          
+          
+
+
+          
+      
+        
+    
+  
+              
+              
+
+
+
+
+
+
+

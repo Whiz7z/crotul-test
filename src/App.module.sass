@@ -1,0 +1,11 @@
+
+.container  
+
+  display: grid
+  grid-template-columns: minmax(auto,20%) minmax(1285px, 1fr) minmax(auto,20%)
+  position: relative
+  @media  screen and (max-width: 1440px)
+    grid-template-columns: 10% 1fr 10%
+
+  @media  screen and (max-width: 440px)
+    grid-template-columns: 20px 1fr 20px

@@ -1,0 +1,214 @@
+@import "../../styles/variables"
+  
+.pricing_container 
+  grid-row: 2/3
+  grid-column: 2/3
+  margin-top: 280px
+  margin-bottom: 100px
+  display: grid
+  row-gap: 60px
+  h2
+    font-size: 5.4rem
+    font-weight: bold
+    text-transform: uppercase
+  .main_description
+    font-size: 1.6rem
+    max-width: 740px
+
+  .slider_btns
+      display: none
+      gap: 20px
+      justify-self: end
+      .slider_btn
+        width: 40px
+        height: 40px
+        background: transparent
+        border: 1px solid $uiBg
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+
+    
+  .pricing_options
+    display: flex
+    gap:60px
+
+    .option
+      display: grid
+      row-gap: 2rem
+      .image_wrapper
+
+      .price
+        font-size: 2rem
+        span
+          font-weight: bold
+
+      .description
+        font-size: 1.6rem
+        font-weight: regular
+
+      button
+        font-weight: bold
+        font-size: 1.6rem
+        justify-self: end
+        margin-right: 20px
+        background: none
+        border: none
+        position: relative
+        padding: 1.1rem 2.2rem
+        border-radius: 100px
+        transition: 300ms
+        cursor: pointer
+
+        &:hover
+          background: $uiBg
+          color: $white
+
+          span 
+            svg 
+              path
+                fill: $white
+
+        span
+          position: relative
+          top: 4px
+          padding-left: 20px
+          .svg
+            path 
+
+
+@media  screen and (max-width: 1080px)
+  .pricing_container
+    h2
+      font-size: 4.4rem
+    .main_description
+      font-size: 1.5rem
+    .pricing_options
+      gap:20px
+      .option
+        .price
+          font-size: 1.6rem
+        .description
+          font-size: 1.4rem
+        button
+          font-size: 1.4rem
+
+@media screen and (max-width: 860px)
+  .pricing_container
+    h2
+      font-size: 3.6rem
+    .main_description
+      font-size: 1.5rem
+    .pricing_options
+      gap:20px
+      .option
+        .price
+          font-size: 1.4rem
+        .description
+          font-size: 1.2rem
+        button
+          font-size: 1.4rem
+          justify-self: center
+          margin-right: 0px
+
+@media screen and (max-width: 700px)
+  .pricing_container
+    row-gap: 40px
+    h2
+    .main_description
+      font-size: 1.3rem
+    .pricing_options
+      gap:20px
+      .option
+        .price
+          font-size: 1.2rem
+        .description
+          font-size: 1.2rem
+        button
+          font-size: 1.2rem
+          justify-self: center
+          margin-right: 0px
+          padding: 0.6rem 1.8rem
+
+@media screen and (max-width: 580px)
+  .pricing_container
+    row-gap: 40px
+    h2
+      font-size: 3rem
+    .main_description
+      font-size: 1.1rem
+    .pricing_options
+      gap:10px
+      .option
+        row-gap: 1.2rem
+        .price
+          font-size: 1rem
+        .description
+          font-size: 1rem
+        button
+          font-size: 1rem
+          justify-self: center
+          margin-right: 0px
+          padding: 0.4rem 1.8rem 0.6rem 1.8rem
+          span
+            padding-left: 10px
+            top: 4px
+            svg
+              width: 12px
+              
+            
+@media screen and (max-width: 490px)
+  .pricing_container
+    .main_description
+      font-size: 1.4rem
+    .slider_btns
+      display: flex
+      .slider_btn
+        cursor: pointer
+        transition: 300ms
+
+        &:hover
+          transform: scale(1.1)
+    .pricing_options
+      display: block
+      
+      min-width: 100%
+      overflow: hidden
+      padding: 0 1px
+      
+      
+      .option
+        padding: 20px 24px
+        border: 1px solid $border
+        border-radius: 24px
+        min-width: 100%
+        justify-self: center
+        transition: 300ms
+       
+
+        .price
+          font-size: 1.8rem
+        .description
+          font-size: 1.6rem
+        button 
+          font-size: 1.6rem
+          padding: 1.1rem 2.2rem
+          span
+            top: 3px
+            svg
+              width: 21px
+        
+      .active
+        transform: translateX(0)
+        position: relative
+      .left
+        transform: translateX(-300%)
+        position: absolute
+      .right
+        transform: translateX(300%)
+        position: absolute
+        top: 0
+
+        
+        
