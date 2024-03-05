@@ -33,11 +33,20 @@
   .pricing_options
     display: flex
     gap:60px
-
+    // background-image: url('../../images/pricingBg.png') 
+    // background-repeat: no-repeat
+    //background-color: red
+    position: relative
+    .imageBg_wrapper
+      position: absolute
+      top: 0
+      right: 0
+      img
+        width: 790px
     .option
       display: grid
       row-gap: 2rem
-      .image_wrapper
+      
 
       .price
         font-size: 2rem
@@ -75,8 +84,7 @@
           position: relative
           top: 4px
           padding-left: 20px
-          .svg
-            path 
+          
 
 
 @media  screen and (max-width: 1080px)
@@ -116,7 +124,7 @@
 @media screen and (max-width: 700px)
   .pricing_container
     row-gap: 40px
-    h2
+    
     .main_description
       font-size: 1.3rem
     .pricing_options
@@ -177,6 +185,9 @@
       min-width: 100%
       overflow: hidden
       padding: 0 1px
+      .imageBg_wrapper
+        display: none
+      
       
       
       .option

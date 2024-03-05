@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Pricing.module.sass";
 import priceImg from "../../images/pricingImg.png";
+import pricingBg from "../../images/pricingBg.png";
 
 import LeftSliderArrow from "./../../svg/LeftSliderArrow";
 import RightSliderArrow from "./../../svg/RightSliderArrow";
@@ -78,6 +79,9 @@ const Pricing = () => {
         </div>
       </div>
       <section className={styles.pricing_options}>
+        <div className={styles.imageBg_wrapper}>
+          <img src={pricingBg} alt="bg" />
+        </div>
         {items.map((item) => (
           <PricingItem key={item.id} item={item} currentSlide={currentSlide} />
         ))}
